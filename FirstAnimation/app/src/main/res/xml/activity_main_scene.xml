@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<MotionScene 
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:motion="http://schemas.android.com/apk/res-auto">
+<MotionScene xmlns:motion="http://schemas.android.com/apk/res-auto">
 
+    <!--==============================
+               OnClick
+    ==============================-->
     <Transition
-        motion:constraintSetEnd="@+id/end"
-        motion:constraintSetStart="@id/start"
+        motion:constraintSetEnd="@layout/state_1"
+        motion:constraintSetStart="@layout/activity_main"
         motion:duration="1000">
-       <KeyFrameSet>
-       </KeyFrameSet>
+
+        <OnClick
+            motion:clickAction="toggle"
+            motion:targetId="@+id/view" />
+
     </Transition>
 
-    <ConstraintSet android:id="@+id/start">
-    </ConstraintSet>
+    <!--==============================
+                OnSwipe
+    ==============================-->
+    <!--        <Transition-->
+    <!--            motion:constraintSetEnd="@layout/state_1"-->
+    <!--            motion:constraintSetStart="@layout/activity_main">-->
 
-    <ConstraintSet android:id="@+id/end">
-    </ConstraintSet>
+    <!--            <OnSwipe-->
+    <!--                motion:dragDirection="dragRight"-->
+    <!--                motion:targetId="@+id/view"-->
+    <!--                motion:touchAnchorSide="right"-->
+    <!--                motion:touchRegionId="@+id/view" />-->
+    <!--        </Transition>-->
 </MotionScene>
+
+
