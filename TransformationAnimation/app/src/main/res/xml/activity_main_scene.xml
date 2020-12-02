@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <!--==============================
+            Transition 1
+      ==============================-->
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@layout/state_1"
+        motion:constraintSetStart="@layout/activity_main"
+        motion:duration="3000">
+
+        <KeyFrameSet>
+            <!--==============================
+                    backgroundColor
+            ==============================-->
+            <!--Red-->
+            <KeyAttribute
+                motion:framePosition="0"
+                motion:motionTarget="@+id/background">
+                <CustomAttribute
+                    motion:attributeName="backgroundColor"
+                    motion:customColorValue="#FF0000" />
+            </KeyAttribute>
+            <!--Blue-->
+            <KeyAttribute
+                motion:framePosition="100"
+                motion:motionTarget="@+id/background">
+                <CustomAttribute
+                    motion:attributeName="backgroundColor"
+                    motion:customColorValue="#0000FF" />
+            </KeyAttribute>
+
+            <!--==============================
+                    crossfade
+            ==============================-->
+            <!--One-->
+            <KeyAttribute
+                motion:framePosition="0"
+                motion:motionTarget="@+id/filter_view">
+                <CustomAttribute
+                    motion:attributeName="crossfade"
+                    motion:customFloatValue="0" />
+            </KeyAttribute>
+            <!--Two-->
+            <KeyAttribute
+                motion:framePosition="100"
+                motion:motionTarget="@+id/filter_view">
+                <CustomAttribute
+                    motion:attributeName="crossfade"
+                    motion:customFloatValue="1" />
+            </KeyAttribute>
+        </KeyFrameSet>
+    </Transition>
+
+    <!--==============================
+            Transition 2
+      ==============================-->
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@layout/activity_main"
+        motion:constraintSetStart="@layout/state_1"
+        motion:duration="3000">
+        <KeyFrameSet>
+            <!--==============================
+                    backgroundColor
+            ==============================-->
+            <!--Red-->
+            <KeyAttribute
+                motion:framePosition="0"
+                motion:motionTarget="@+id/background">
+                <CustomAttribute
+                    motion:attributeName="backgroundColor"
+                    motion:customColorValue="#0000FF" />
+            </KeyAttribute>
+            <!--Blue-->
+            <KeyAttribute
+                motion:framePosition="100"
+                motion:motionTarget="@+id/background">
+                <CustomAttribute
+                    motion:attributeName="backgroundColor"
+                    motion:customColorValue="#FF0000" />
+            </KeyAttribute>
+
+            <!--==============================
+                    crossfade
+            ==============================-->
+            <!--One-->
+            <KeyAttribute
+                motion:framePosition="0"
+                motion:motionTarget="@+id/filter_view">
+                <CustomAttribute
+                    motion:attributeName="crossfade"
+                    motion:customFloatValue="1" />
+            </KeyAttribute>
+            <!--Two-->
+            <KeyAttribute
+                motion:framePosition="100"
+                motion:motionTarget="@+id/filter_view">
+                <CustomAttribute
+                    motion:attributeName="crossfade"
+                    motion:customFloatValue="0" />
+            </KeyAttribute>
+        </KeyFrameSet>
+    </Transition>
+</MotionScene>
+
+
