@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <!--==============================
+               OnClick
+    ==============================-->
+    <Transition
+        motion:constraintSetEnd="@layout/state_1"
+        motion:constraintSetStart="@layout/activity_main"
+        motion:duration="3000"
+        motion:pathMotionArc="none">
+
+        <OnClick
+            motion:clickAction="toggle"
+            motion:targetId="@+id/view" />
+        <KeyFrameSet>
+            <KeyPosition
+                motion:framePosition="10"
+                motion:keyPositionType="parentRelative"
+                motion:motionTarget="@+id/view"
+                motion:pathMotionArc="startVertical" />
+            <KeyPosition
+                motion:framePosition="50"
+                motion:keyPositionType="parentRelative"
+                motion:motionTarget="@+id/view"
+                motion:pathMotionArc="startHorizontal" />
+            <KeyPosition
+                motion:framePosition="90"
+                motion:keyPositionType="parentRelative"
+                motion:motionTarget="@+id/view"
+                motion:pathMotionArc="none" />
+        </KeyFrameSet>
+    </Transition>
+</MotionScene>
+
+
